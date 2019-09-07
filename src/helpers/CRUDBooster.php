@@ -1291,6 +1291,7 @@ class CRUDBooster
 
         $new_result = [];
         foreach ($result as $ro) {
+            $ro = array_change_key_case($ro, CASE_UPPER);
             $new_result[] = $ro['COLUMN_NAME'];
         }
 
